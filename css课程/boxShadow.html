@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box-shadow</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			margin: 50px;
+			background: #ccc;
+
+			
+		}
+		.box:hover{
+			/*x轴偏移 y轴偏移 模糊半径 阴影扩展半径 阴影颜色 阴影类型*/
+			box-shadow: 0px 5px 15px #000 inset;
+			/*一个元素可以添加多个不同类型的阴影，多个阴影也会重叠，最先写的阴影将显示在最顶层
+			box-shadow:10px 10px 10px red,10px 10px 5px blue inset;
+			*/
+		}
+
+	</style>
+</head>
+<body>
+	<!-- x轴偏移 -->
+
+	<div class="box"></div>
+</body>
+</html>

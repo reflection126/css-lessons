@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>::before和::after</title>
+	<style>
+		/*在前面添加内容*/
+		h1::before{
+			content:"IT在线教育平台";
+			color: red;
+		}
+		h1::after{
+			content: "IT职业教育";
+			font-size:18px;
+		}
+
+		ul{
+			list-style: none;
+		}
+		/*添加图标*/
+		ul li::before{
+			width: 4px;
+			height:4px;
+			list-style: none;
+			background: #c00;
+			/*此时无法显示*/
+			/*需要设置显示为行级块元素*/
+			display: inline-block;
+			/*还需设置content*/
+			content: "";
+			/*调整位置*/
+			margin-right: 5px;
+			margin-bottom: 5px;
+		}
+
+		.out{
+			width:500px;
+			border: 1px solid red;
+		}
+		.out .box{
+			background: green;
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+		/*清除浮动*/
+		.out::after{
+			content:"";
+			clear: both;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="out">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+
+	<h1>极客学院</h1>
+
+	<ul>
+		<li>IT在线教育平台</li>
+		<li>IT在线教育平台</li>
+		<li>IT在线教育平台</li>
+		<li>IT在线教育平台</li>
+		<li>IT在线教育平台</li>
+	</ul>
+</body>
+</html>

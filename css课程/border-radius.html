@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>border</title>
+	<style>
+		.box{
+			width: 200px;
+			height:200px;
+			background:red;
+			border-radius: 20px;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background: blue;
+			/*圆形*/
+			border-radius:50%; 
+			border-radius: 10px 20px;
+			/*左上，右上和左下，左下*/
+			border-radius: 10px 20px 30px;
+			/*左上，右上，右下，左下*/
+			border-radius: 10px 20px 30px 50px;
+			/*左上角水平方向10px 纵向50px*/
+			border-top-left-radius: 10px 50px;
+			/*每个角都改成水平50px，纵向10px*/
+			border-radius: 50px/10px；
+		}
+		.button{
+			width: 200px;
+			height: 40px;
+			background: green;
+			border-radius: 100px;
+			text-align:center;
+			line-height: 40px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box2"></div>
+	<div class="button">了解更多</div>
+</body>
+</html>
